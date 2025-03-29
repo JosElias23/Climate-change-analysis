@@ -163,7 +163,11 @@ Este proyecto utiliza datos meteorológicos públicos de NOAA GSOD para analizar
   - `matplotlib`
   - `seaborn`
   - `calendar`
+## Notas
+- Asegúrate de reiniciar el kernel si cambias el año para evitar errores de caché.
+- Los datos extraídos están limitados a las columnas necesarias para optimizar el rendimiento.
 
+  
 ## Configuración
 
 1. **Google Cloud SDK**: Configura el SDK de Google Cloud y autentica tu cliente para acceder a BigQuery.
@@ -220,7 +224,6 @@ Se eliminan columnas innecesarias y se convierten las fechas al formato adecuado
 ![Cantidad de eventos climaticos mensual](Images/Cantidad_de_eventos_climaticos_mensual.png)
 ## 2. Temperaturas promedio 2020-2024
 ![Temperaturas promedio 2020-2024](Images/Temperaturas_promedio_2020-2024.png)
-## Notas
 
 ## Análisis Detallado
 
@@ -255,5 +258,3 @@ Se comparan las temperaturas promedio diarias de los años 2020 a 2024 mediante 
 
 
 
-- Asegúrate de reiniciar el kernel si cambias el año para evitar errores de caché.
-- Los datos extraídos están limitados a las columnas necesarias para optimizar el rendimiento.
