@@ -1,91 +1,99 @@
-# Climate Data Analysis with NASA POWER API and BigQuery
+# Análisis de Datos Climáticos: BigQuery y NASA POWER API
 
-Este proyecto combina datos climáticos obtenidos de la API de NASA POWER y datos históricos de BigQuery para realizar un análisis completo del clima en el año 2024.
+Este proyecto analiza datos climáticos históricos y en tiempo real utilizando BigQuery y la API pública de NASA POWER. A continuación, se describen las etapas principales del proyecto y los hallazgos obtenidos.
 
-## Descripción del proyecto
+## 1. Exploración de Datos
 
-El proyecto realiza las siguientes tareas:
+### Fuentes de Datos
+- **BigQuery**: Dataset público `bigquery-public-data.noaa_gsod.gsod2024` para datos históricos de temperaturas globales.
+- **NASA POWER API**: Datos meteorológicos horarios para una ubicación específica (Latitud: 40°N, Longitud: 100°W).
 
-1. **Consulta a la API de NASA POWER:**
-   - Obtiene datos climáticos horarios para un rango de fechas específico (en este caso, todo el año 2024).
-   - Los datos incluyen temperatura, humedad relativa, velocidad y dirección del viento, precipitación, nubosidad y más.
+### Datos Extraídos
+- **BigQuery**: Datos de temperaturas globales para el año 2024.
+- **NASA POWER**: Datos meteorológicos horarios, incluyendo temperatura, humedad, velocidad del viento, entre otros.
 
-2. **Consulta a BigQuery:**
-   - Extrae datos históricos de la tabla pública `bigquery-public-data.noaa_gsod.gsod2024` para el año 2024.
-   - Los datos incluyen información meteorológica global, como temperatura, precipitación y presión atmosférica.
+---
 
-3. **Procesamiento de datos:**
-   - Convierte los datos obtenidos de ambas fuentes en DataFrames de pandas para análisis.
-   - Combina y analiza los datos para identificar patrones y tendencias.
+## 2. Limpieza y Transformación de Datos
 
-4. **Exportación de datos:**
-   - Guarda los datos procesados en un archivo CSV para análisis local.
-   - Los datos también pueden ser cargados en una tabla de BigQuery para análisis avanzado.
+### Procesos Realizados
+- **BigQuery**:
+  - Eliminación de columnas irrelevantes.
+  - Renombrado de columnas para mayor claridad.
+  - Conversión de fechas al formato `datetime`.
+  - Conversión de temperaturas de Fahrenheit a Celsius.
+  - Ordenamiento de datos por fecha.
 
-## Requisitos previos
+- **NASA POWER**:
+  - Conversión del índice a formato `datetime`.
+  - Normalización de datos para alinearlos con el formato de BigQuery.
+  - Unión de ambos datasets utilizando la columna de fechas.
 
-Antes de ejecutar este proyecto, asegúrate de tener instalados los siguientes programas y bibliotecas:
+### Filtros Aplicados
+- Período de estudio: Año 2024.
+- Ubicación específica: Latitud 40°N, Longitud 100°W.
 
-- **Python 3.8 o superior**
-- **Bibliotecas de Python:**
-  - `requests`
-  - `pandas`
-  - `google-cloud-bigquery`
+---
 
-Puedes instalar las dependencias ejecutando:
+## 3. Visualización de Datos
 
-```bash
-pip install requests pandas google-cloud-bigquery
+Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seaborn**:
+
+### 3.1 Tendencia diaria de temperatura en 2024 (BigQuery)
+![Tendencia diaria de temperatura](attachment://Temperatura_Diaria_2024.png)
+
+### 3.2 Matriz de correlación de variables meteorológicas (BigQuery)
+![Matriz de correlación BigQuery](attachment://Matriz_Correlacion_BigQuery.png)
+
+### 3.3 Temperatura vs Tiempo (NASA POWER)
+![Temperatura vs Tiempo](attachment://Temperatura_vs_Tiempo.png)
+
+### 3.4 Matriz de correlación de variables meteorológicas (NASA POWER)
+![Matriz de correlación NASA POWER](attachment://Matriz_Correlacion_NASA_POWER.png)
+
+### 3.5 Correlaciones clave en datos meteorológicos
+![Correlaciones clave](attachment://Correlaciones_Clave.png)
+
+### 3.6 Comparación de temperaturas: NASA vs BigQuery
+![Comparación de temperaturas](attachment://Comparacion_Temperaturas.png)
+
+---
+
+## 4. Análisis e Interpretación de Resultados
+
+### Hallazgos Clave
+- **Tendencias de Temperatura**: Aumento gradual de las temperaturas durante el año 2024.
+- **Correlaciones**:
+  - Fuerte correlación positiva entre temperatura y humedad específica (r = 0.78).
+  - Correlación negativa entre temperatura y humedad relativa (r = -0.51).
+- **Comparación de Fuentes**: Los datos de BigQuery y NASA POWER mostraron tendencias similares, validando la consistencia entre ambas fuentes.
+
+### Conclusiones
+- Los datos sugieren un aumento en las temperaturas globales, consistente con las tendencias de cambio climático.
+- Las correlaciones identificadas pueden ser útiles para modelar el impacto del cambio climático en variables meteorológicas.
+
+---
+
+## 5. Requisitos y Ejecución
+
+### Requisitos
+El archivo `requirements.txt` incluye las librerías necesarias para ejecutar el proyecto:
 ```
-Además, asegúrate de tener configurado el SDK de Google Cloud y autenticado con una cuenta que tenga acceso a BigQuery. Puedes autenticarte ejecutando:
-```
-gcloud auth application-default login
-```
-Cómo ejecutar el proyecto:
-Clona el repositorio ejecutando:
-```
-git clone https://github.com/JosElias23/Climate-change-analysis.git
-```
-Navega al directorio del proyecto:
-```
-cd Climate-change-analysis
-```
-Ejecuta el script en Python:
-```
-python mineria_S1.ipynb
+google-cloud-bigquery
+pandas
+matplotlib
+seaborn
+requests
+numpy
 ```
 
-Resultados esperados:
+### Ejecución
+1. Clonar el repositorio.
+2. Instalar las dependencias: `pip install -r requirements.txt`.
+3. Ejecutar el archivo Jupyter Notebook para reproducir el análisis.
 
-Los datos de la API de NASA POWER y BigQuery se combinarán en un DataFrame.
-Se generará un archivo CSV con los datos procesados.
+---
 
-Configuración de BigQuery
-El script utiliza la tabla pública bigquery-public-data.noaa_gsod.gsod2024 para obtener datos meteorológicos históricos. Asegúrate de que:
-
-Tienes un proyecto de Google Cloud configurado.
-
-Estás autenticado con una cuenta que tiene acceso a BigQuery.
-
-El script está configurado correctamente para ejecutar la consulta SQL:
-query = """
-SELECT *  # Selecciona todas las columnas
-FROM `bigquery-public-data.noaa_gsod.gsod2024`  # Tabla completa
-WHERE date BETWEEN '2024-01-01' AND '2024-12-31'
-"""
-
-El resultado de esta consulta se convierte en un DataFrame de pandas para análisis.
-
-Resultados clave
-Archivo CSV: Los datos combinados se guardan en un archivo CSV para análisis local.
-BigQuery: Los datos procesados pueden ser cargados nuevamente en BigQuery para análisis avanzado.
-Manejo de errores
-Si la solicitud a la API de NASA POWER falla, el script mostrará un mensaje de error con el código de estado HTTP y el contenido de la respuesta.
-Si ocurre un error al ejecutar la consulta en BigQuery, se mostrará un mensaje detallado en la consola.
-Contribuciones
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
-
-Haz un fork del repositorio.
-
-Crea una nueva rama para tus cambios:
+## Créditos
+Este proyecto fue desarrollado como parte de un análisis de datos climáticos utilizando herramientas modernas de ciencia de datos.
 
