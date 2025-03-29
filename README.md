@@ -41,33 +41,33 @@ Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seabor
 
 ### 3.1 Tendencia diaria de temperatura en 2024 (BigQuery)
 
-![Tendencia diaria de temperatura](images/Temperartura_Diaria_2024.png)
+![Tendencia diaria de temperatura](Images/Temperartura_Diaria_2024.png)
 
 
 
 ### 3.2 Matriz de correlación de variables meteorológicas (BigQuery)
 
-![Matriz de correlación BigQuery](Matriz_Correlacion_BigQuery.png)
+![Matriz de correlación BigQuery](Images/Matriz_Correlacion_BigQuery.png)
 
 
 ### 3.3 Temperatura vs Tiempo (NASA POWER)
 
-![Temperatura vs Tiempo](Temperatura_vs_Tiempo.png)
+![Temperatura vs Tiempo](Images/Temperatura_vs_Tiempo.png)
 
 
 ### 3.4 Matriz de correlación de variables meteorológicas (NASA POWER)
 
-![Matriz de correlación NASA POWER](Matriz_Correlacion_NASA_POWER.png)
+![Matriz de correlación NASA POWER](Images/Matriz_Correlacion_NASA_POWER.png)
 
 
 ### 3.5 Correlaciones clave en datos meteorológicos
 
-![Correlaciones clave](Correlaciones_Clave.png)
+![Correlaciones clave](Images/Correlaciones_Clave.png)
 
 
 ### 3.6 Comparación de temperaturas: NASA vs BigQuery
 
-![Comparación de temperaturas](Comparacion_Temperaturas.png)
+![Comparación de temperaturas](Images/Comparacion_Temperaturas.png)
 
 ---
 
