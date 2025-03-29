@@ -108,3 +108,80 @@ numpy
 
 ## Créditos
 Este proyecto fue desarrollado como parte de un análisis de datos climáticos utilizando herramientas modernas de ciencia de datos.
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Análisis de Eventos Climáticos y Comparación de Temperaturas
+
+Este proyecto utiliza datos meteorológicos públicos de NOAA GSOD para analizar eventos climáticos y comparar temperaturas promedio diarias entre los años 2020 y 2024. El análisis incluye la limpieza de datos, el conteo de eventos climáticos, y la visualización de tendencias de temperatura y ocurrencias de eventos.
+
+## Requisitos Previos
+
+- **Python 3.7+**
+- **Bibliotecas necesarias**:
+  - `google-cloud-bigquery`
+  - `pandas`
+  - `matplotlib`
+  - `seaborn`
+  - `calendar`
+
+## Configuración
+
+1. **Google Cloud SDK**: Configura el SDK de Google Cloud y autentica tu cliente para acceder a BigQuery.
+2. **Dependencias**: Instala las bibliotecas necesarias ejecutando:
+   ```bash
+   pip install google-cloud-bigquery pandas matplotlib seaborn
+   ```
+
+## Funcionalidades
+
+### 1. Extracción de Datos
+El código utiliza BigQuery para extraer datos meteorológicos de un año específico. Puedes cambiar el año modificando la variable `year` en el código.
+
+### 2. Limpieza de Datos
+Se eliminan columnas innecesarias y se convierten las fechas al formato adecuado. Además, se filtran filas con datos inválidos.
+
+### 3. Análisis de Eventos Climáticos
+- Se cuentan las ocurrencias de eventos como niebla, lluvia, nieve, granizo, tormentas eléctricas, y tornados.
+- Los resultados se presentan en un DataFrame y en un gráfico de barras mensual.
+
+### 4. Comparación de Temperaturas
+- Se generan gráficos de líneas para comparar las temperaturas promedio diarias entre los años 2020 y 2024.
+- Cada gráfico incluye una línea de referencia con la temperatura promedio anual.
+
+## Uso
+
+1. **Ejecutar el Notebook**:
+   - Abre el archivo `.ipynb` en Jupyter Notebook o Google Colab.
+   - Ejecuta las celdas en orden para realizar el análisis.
+
+2. **Modificar el Año**:
+   - Cambia la variable `year` para analizar un año diferente.
+
+3. **Visualización**:
+   - Los gráficos generados muestran tendencias de temperatura y ocurrencias de eventos climáticos.
+
+## Resultados Esperados
+
+- **Gráficos de Temperatura**: Comparación visual de las temperaturas promedio diarias para cada año.
+- **Resumen de Eventos Climáticos**: Tabla y gráfico que muestran la cantidad de ocurrencias por tipo de evento y mes.
+
+## Ejemplo de Salida
+
+### Resumen de Eventos Climáticos
+| Evento                  | Ocurrencia | Porcentaje |
+|-------------------------|------------|------------|
+| Fog                    | 120        | 10.5%      |
+| Rain Drizzle           | 85         | 7.4%       |
+| Snow Ice Pellets       | 30         | 2.6%       |
+
+### Gráfico de Temperatura
+![Ejemplo de Gráfico](https://via.placeholder.com/800x400?text=Gráfico+de+Temperatura)
+
+## Notas
+
+- Asegúrate de reiniciar el kernel si cambias el año para evitar errores de caché.
+- Los datos extraídos están limitados a las columnas necesarias para optimizar el rendimiento.
