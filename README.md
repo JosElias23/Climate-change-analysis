@@ -195,7 +195,7 @@ Se eliminan columnas innecesarias y se convierten las fechas al formato adecuado
 | Snow Ice Pellets       | 30         | 2.6%       |
 
 ### Gráficos
-## 1. Cantidad de eventos climaticos mensual
+## 1. Cantidad de eventos climaticos mensual 2024
 ![Cantidad de eventos climaticos mensual](Images/Cantidad_de_eventos_climaticos_mensual.png)
 ## 2. Temperaturas promedio 2020-2024
 ![Temperaturas promedio 2020-2024](Images/Temperaturas_promedio_2020-2024.png)
