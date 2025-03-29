@@ -224,7 +224,9 @@ Se eliminan columnas innecesarias y se convierten las fechas al formato adecuado
 ![Cantidad de eventos climaticos mensual](Images/Cantidad_de_eventos_climaticos_mensual.png)
 ## 2. Cantidad de eventos climaticos mensual 2023
 ![Cantidad de eventos climaticos mensual](Images/Cantidad_de_eventos_climaticos_mensual_2023.png)
-## 3. Temperaturas promedio 2020-2024
+## 3. Cantidad de eventos climaticos mensual 2022
+![Cantidad de eventos climaticos mensual](Images/Cantidad_de_eventos_climaticos_mensual_2022.png)
+## 4. Temperaturas promedio 2020-2024
 ![Temperaturas promedio 2020-2024](Images/Temperaturas_promedio_2020-2024.png)
 
 ## Análisis Detallado
