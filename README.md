@@ -96,5 +96,3 @@ numpy
 
 ## Créditos
 Este proyecto fue desarrollado como parte de un análisis de datos climáticos utilizando herramientas modernas de ciencia de datos.
-.
-
