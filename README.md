@@ -1,3 +1,27 @@
+## Índice
+1. [Exploración de Datos](#1-exploración-de-datos)
+   - [Fuentes de Datos](#fuentes-de-datos)
+   - [Datos Extraídos](#datos-extraídos)
+2. [Limpieza y Transformación de Datos](#2-limpieza-y-transformación-de-datos)
+   - [Procesos Realizados](#procesos-realizados)
+   - [Filtros Aplicados](#filtros-aplicados)
+3. [Visualización de Datos](#3-visualización-de-datos)
+   - [Tendencia diaria de temperatura en 2024 (NOAA)](#31-tendencia-diaria-de-temperatura-en-2024-noaa)
+   - [Matriz de correlación de variables meteorológicas (NOAA)](#32-matriz-de-correlación-de-variables-meteorológicas-noaa)
+   - [Temperatura vs Tiempo (NASA POWER)](#33-temperatura-vs-tiempo-nasa-power)
+   - [Matriz de correlación de variables meteorológicas (NASA POWER)](#34-matriz-de-correlación-de-variables-meteorológicas-nasa-power)
+   - [Correlaciones clave en datos meteorológicos](#35-correlaciones-clave-en-datos-meteorológicos)
+   - [Comparación de temperaturas: NASA vs NOAA](#36-comparación-de-temperaturas-nasa-vs-noaa)
+4. [Análisis e Interpretación de Resultados](#4-análisis-e-interpretación-de-resultados)
+   - [Hallazgos Clave](#hallazgos-clave)
+   - [Estimación de Ubicación Geográfica](#estimación-de-ubicación-geográfica)
+   - [Superposición de Gráficos](#superposición-de-gráficos)
+   - [Correlaciones y Deducciones](#correlaciones-y-deducciones)
+   - [Conclusiones](#conclusiones)
+5. [Requisitos y Ejecución](#5-requisitos-y-ejecución)
+   - [Requisitos](#requisitos)
+   - [Ejecución](#ejecución)
+6. [Créditos](#6-créditos)
 # Análisis de Datos Climáticos: NOAA Global Surface Summary of the Day y NASA POWER API
 
 Este proyecto analiza datos climáticos históricos y en tiempo real utilizando el dataset de **NOAA Global Surface Summary of the Day** y la API pública de **NASA POWER**. A continuación, se describen las etapas principales del proyecto, los hallazgos obtenidos y las deducciones realizadas.
