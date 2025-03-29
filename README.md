@@ -234,7 +234,8 @@ El análisis de eventos climáticos incluye fenómenos como niebla, lluvia, niev
 
 #### Observaciones:
 - **Frecuencia Relativa**: Algunos eventos, como la niebla, ocurren con mayor frecuencia que otros, como los tornados, que son más raros pero potencialmente más destructivos.
-
+- **Evento mas recurrente**: El fenomeno meteorologico mas comun es la lluvia-llovizna, probablemente influenciado por la ubicacion geografica de los datos (E.E.U.U.) 
+- **Cantidades de registros**: Se puede apreciar una gran cantidad de registros de cada fenomeno, esto puede deberse a que tan seguido se registraron las mediciones  
 ### 2. **Tendencias de Temperatura**
 Se comparan las temperaturas promedio diarias de los años 2020 a 2024 mediante gráficos de líneas. Cada gráfico incluye una línea de referencia que representa la temperatura promedio anual.
 
