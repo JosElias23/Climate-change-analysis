@@ -40,7 +40,7 @@ Este proyecto analiza datos climáticos históricos y en tiempo real utilizando 
 Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seaborn**:
 
 ### 3.1 Tendencia diaria de temperatura en 2024 (BigQuery)
-![Tendencia diaria de temperatura](attachment://Temperatura_Diaria_2024.png)
+![Tendencia diaria de temperatura](Temperatura_Diaria_2024.png)
 
 ### 3.2 Matriz de correlación de variables meteorológicas (BigQuery)
 ![Matriz de correlación BigQuery](attachment://Matriz_Correlacion_BigQuery.png)
