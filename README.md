@@ -1,15 +1,15 @@
-# Análisis de Datos Climáticos: BigQuery y NASA POWER API
+# Análisis de Datos Climáticos: NOAA y NASA POWER API
 
-Este proyecto analiza datos climáticos históricos y en tiempo real utilizando BigQuery y la API pública de NASA POWER. A continuación, se describen las etapas principales del proyecto y los hallazgos obtenidos.
+Este proyecto analiza datos climáticos históricos y en tiempo real utilizando el dataset de NOAA y la API pública de NASA POWER. A continuación, se describen las etapas principales del proyecto y los hallazgos obtenidos.
 
 ## 1. Exploración de Datos
 
 ### Fuentes de Datos
-- **BigQuery**: Dataset público `bigquery-public-data.noaa_gsod.gsod2024` para datos históricos de temperaturas globales.
+- **NOAA**: Dataset público `bigquery-public-data.noaa_gsod.gsod2024` para datos históricos de temperaturas globales.
 - **NASA POWER API**: Datos meteorológicos horarios para una ubicación específica (Latitud: 40°N, Longitud: 100°W).
 
 ### Datos Extraídos
-- **BigQuery**: Datos de temperaturas globales para el año 2024.
+- **NOAA**: Datos de temperaturas globales para el año 2024.
 - **NASA POWER**: Datos meteorológicos horarios, incluyendo temperatura, humedad, velocidad del viento, entre otros.
 
 ---
@@ -17,7 +17,7 @@ Este proyecto analiza datos climáticos históricos y en tiempo real utilizando 
 ## 2. Limpieza y Transformación de Datos
 
 ### Procesos Realizados
-- **BigQuery**:
+- **NOAA**:
   - Eliminación de columnas irrelevantes.
   - Renombrado de columnas para mayor claridad.
   - Conversión de fechas al formato `datetime`.
@@ -39,13 +39,13 @@ Este proyecto analiza datos climáticos históricos y en tiempo real utilizando 
 
 Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seaborn**:
 
-### 3.1 Tendencia diaria de temperatura en 2024 (BigQuery)
+### 3.1 Tendencia diaria de temperatura en 2024 (NOAA)
 
 ![Tendencia diaria de temperatura](Images/Temperartura_Diaria_2024.png)
 
 
 
-### 3.2 Matriz de correlación de variables meteorológicas (BigQuery)
+### 3.2 Matriz de correlación de variables meteorológicas (NOAA)
 
 ![Matriz de correlación BigQuery](Images/Matriz_Correlacion_BigQuery.png)
 
@@ -65,7 +65,7 @@ Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seabor
 ![Correlaciones clave](Images/Correlaciones_Clave.png)
 
 
-### 3.6 Comparación de temperaturas: NASA vs BigQuery
+### 3.6 Comparación de temperaturas: NASA vs NOAA
 
 ![Comparación de temperaturas](Images/Comparacion_Temperaturas.png)
 
@@ -82,10 +82,10 @@ Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seabor
 
 
 ### Estimación de Ubicación Geográfica
-El análisis de la evolución de las temperaturas a lo largo de un año permitió estimar la ubicación geográfica correspondiente a los datos de BigQuery. Al observar las tendencias y patrones de temperatura, se dedujo que la ubicación más probable era **Latitud: 40°N, Longitud: 100°W**. Esta estimación se validó al comparar los datos de BigQuery con los datos obtenidos de la API de NASA POWER para la misma ubicación.
+El análisis de la evolución de las temperaturas a lo largo de un año permitió estimar la ubicación geográfica correspondiente a los datos de NOAA. Al observar las tendencias y patrones de temperatura, se dedujo que la ubicación más probable era **Latitud: 40°N, Longitud: 100°W**. Esta estimación se validó al comparar los datos de NOAA con los datos obtenidos de la API de NASA POWER para la misma ubicación.
 
 ### Superposición de Gráficos
-Los gráficos generados a partir de los datos de BigQuery y NASA POWER muestran una notable superposición en las tendencias de temperatura. Esto refuerza la consistencia entre ambas fuentes de datos y valida la estimación de la ubicación geográfica. La similitud en las tendencias sugiere que los datos de BigQuery corresponden efectivamente a la ubicación seleccionada en la API de NASA POWER.
+Los gráficos generados a partir de los datos de NOAA y NASA POWER muestran una notable superposición en las tendencias de temperatura. Esto refuerza la consistencia entre ambas fuentes de datos y valida la estimación de la ubicación geográfica. La similitud en las tendencias sugiere que los datos de NOAA corresponden efectivamente a la ubicación seleccionada en la API de NASA POWER.
 
 
 ### Conclusiones
