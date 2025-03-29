@@ -36,17 +36,24 @@ Puedes instalar las dependencias ejecutando:
 
 ```bash
 pip install requests pandas google-cloud-bigquery
-
+```
 Además, asegúrate de tener configurado el SDK de Google Cloud y autenticado con una cuenta que tenga acceso a BigQuery. Puedes autenticarte ejecutando:
+```
 gcloud auth application-default login
-
+```
 Cómo ejecutar el proyecto:
 Clona el repositorio ejecutando:
+```
 git clone https://github.com/JosElias23/Climate-change-analysis.git
+```
 Navega al directorio del proyecto:
+```
 cd Climate-change-analysis
+```
 Ejecuta el script en Python:
+```
 python mineria_S1.ipynb
+```
 
 Resultados esperados:
 
