@@ -80,6 +80,14 @@ Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seabor
   - Correlación negativa entre temperatura y humedad relativa (r = -0.51).
 - **Comparación de Fuentes**: Los datos de BigQuery y NASA POWER mostraron tendencias similares, validando la consistencia entre ambas fuentes.
 
+
+### Estimación de Ubicación Geográfica
+El análisis de la evolución de las temperaturas a lo largo de un año permitió estimar la ubicación geográfica correspondiente a los datos de BigQuery. Al observar las tendencias y patrones de temperatura, se dedujo que la ubicación más probable era **Latitud: 40°N, Longitud: 100°W**. Esta estimación se validó al comparar los datos de BigQuery con los datos obtenidos de la API de NASA POWER para la misma ubicación.
+
+### Superposición de Gráficos
+Los gráficos generados a partir de los datos de BigQuery y NASA POWER muestran una notable superposición en las tendencias de temperatura. Esto refuerza la consistencia entre ambas fuentes de datos y valida la estimación de la ubicación geográfica. La similitud en las tendencias sugiere que los datos de BigQuery corresponden efectivamente a la ubicación seleccionada en la API de NASA POWER.
+
+
 ### Conclusiones
 - Los datos sugieren un aumento en las temperaturas globales, consistente con las tendencias de cambio climático.
 - Las correlaciones identificadas pueden ser útiles para modelar el impacto del cambio climático en variables meteorológicas.
