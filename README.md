@@ -78,7 +78,7 @@ Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seabor
 - **Correlaciones**:
   - Fuerte correlación positiva entre temperatura y humedad específica (r = 0.78).
   - Correlación negativa entre temperatura y humedad relativa (r = -0.51).
-- **Comparación de Fuentes**: Los datos de BigQuery y NASA POWER mostraron tendencias similares, validando la consistencia entre ambas fuentes.
+- **Comparación de Fuentes**: Los datos de NOAA y NASA POWER mostraron tendencias similares, validando la consistencia entre ambas fuentes.
 
 
 ### Estimación de Ubicación Geográfica
