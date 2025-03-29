@@ -41,7 +41,7 @@ Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seabor
 
 ### 3.1 Tendencia diaria de temperatura en 2024 (BigQuery)
 
-![Tendencia diaria de temperatura](Temperartura_Diaria_2024.png)
+![Tendencia diaria de temperatura](images/Temperartura_Diaria_2024.png)
 
 
 
