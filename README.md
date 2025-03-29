@@ -87,6 +87,12 @@ El análisis de la evolución de las temperaturas a lo largo de un año permiti�
 ### Superposición de Gráficos
 Los gráficos generados a partir de los datos de NOAA y NASA POWER muestran una notable superposición en las tendencias de temperatura. Esto refuerza la consistencia entre ambas fuentes de datos y valida la estimación de la ubicación geográfica. La similitud en las tendencias sugiere que los datos de NOAA corresponden efectivamente a la ubicación seleccionada en la API de NASA POWER.
 
+### Correlaciones y Deducciones
+El análisis de las correlaciones entre las variables meteorológicas reveló los siguientes hallazgos clave:
+- **Temperatura y Humedad Específica (r = 0.78)**: Existe una fuerte correlación positiva entre la temperatura y la humedad específica. Esto sugiere que a medida que la temperatura aumenta, la cantidad de vapor de agua en el aire también tiende a aumentar. Este comportamiento es consistente con las leyes físicas que relacionan la capacidad del aire para retener humedad con la temperatura.
+- **Temperatura y Humedad Relativa (r = -0.51)**: Se observó una correlación negativa moderada entre la temperatura y la humedad relativa. Esto indica que, aunque la cantidad absoluta de vapor de agua puede aumentar con la temperatura, la humedad relativa disminuye porque el aire más cálido puede contener más vapor de agua antes de saturarse.
+- **Velocidad del Viento y Precipitación**: Aunque no se identificaron correlaciones fuertes entre estas variables, los datos sugieren que la velocidad del viento puede influir en la distribución de la precipitación en ciertas condiciones climáticas.
+
 
 ### Conclusiones
 - Los datos sugieren un aumento en las temperaturas globales, consistente con las tendencias de cambio climático.
