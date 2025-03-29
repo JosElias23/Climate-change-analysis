@@ -214,12 +214,46 @@ Se eliminan columnas innecesarias y se convierten las fechas al formato adecuado
 | Rain Drizzle           | 85         | 7.4%       |
 | Snow Ice Pellets       | 30         | 2.6%       |
 
+
 ### Gráficos
 ## 1. Cantidad de eventos climaticos mensual 2024
 ![Cantidad de eventos climaticos mensual](Images/Cantidad_de_eventos_climaticos_mensual.png)
 ## 2. Temperaturas promedio 2020-2024
 ![Temperaturas promedio 2020-2024](Images/Temperaturas_promedio_2020-2024.png)
 ## Notas
+
+## Análisis Detallado
+
+### 1. **Eventos Climáticos**
+El análisis de eventos climáticos incluye fenómenos como niebla, lluvia, nieve, granizo, tormentas eléctricas y tornados. Los datos se procesan para calcular la cantidad de ocurrencias de cada evento por mes y se visualizan en gráficos de barras.
+
+#### Observaciones:
+- **Frecuencia Relativa**: Algunos eventos, como la niebla, ocurren con mayor frecuencia que otros, como los tornados, que son más raros pero potencialmente más destructivos.
+
+### 2. **Tendencias de Temperatura**
+Se comparan las temperaturas promedio diarias de los años 2020 a 2024 mediante gráficos de líneas. Cada gráfico incluye una línea de referencia que representa la temperatura promedio anual.
+
+#### Observaciones:
+- **Variabilidad Anual**: Las temperaturas muestran fluctuaciones ligeras entre los años, lo que podría estar relacionado con el cambio climatico
+- **Estacionalidad**: Se observa un patrón estacional claro, con temperaturas más altas en verano y más bajas en invierno.
+- **Promedio Anual**: Aunque las temperaturas promedio anuales son relativamente estables, hay ligeras tendencias de aumento en algunos años, lo que podría ser indicativo de un cambio climático gradual.
+
+## Conclusiones
+
+1. **Impacto de los Eventos Climáticos**:
+   - Los eventos climáticos tienen una distribución estacional marcada, lo que sugiere que están influenciados por factores como la ubicación geográfica y las condiciones climáticas globales.
+
+
+2. **Tendencias de Temperatura**:
+   - Las temperaturas promedio anuales muestran una ligera tendencia al alza, lo que podría ser consistente con los efectos del cambio climático.
+   - La variabilidad estacional y anual destaca la importancia de monitorear las temperaturas a largo plazo para identificar patrones significativos.
+
+3. **Recomendaciones**:
+   - **Monitoreo Continuo**: Es crucial continuar recopilando y analizando datos meteorológicos para comprender mejor los patrones climáticos y sus implicaciones.
+   - **Preparación para Eventos Extremos**: Las comunidades deben estar preparadas para eventos climáticos extremos, especialmente aquellos que son menos frecuentes pero más destructivos, como los tornados.
+
+
+
 
 - Asegúrate de reiniciar el kernel si cambias el año para evitar errores de caché.
 - Los datos extraídos están limitados a las columnas necesarias para optimizar el rendimiento.
