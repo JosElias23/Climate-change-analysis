@@ -1,15 +1,15 @@
-# Análisis de Datos Climáticos: NOAA y NASA POWER API
+# Análisis de Datos Climáticos: NOAA Global Surface Summary of the Day y NASA POWER API
 
-Este proyecto analiza datos climáticos históricos y en tiempo real utilizando el dataset de NOAA y la API pública de NASA POWER. A continuación, se describen las etapas principales del proyecto y los hallazgos obtenidos.
+Este proyecto analiza datos climáticos históricos y en tiempo real utilizando el dataset de **NOAA Global Surface Summary of the Day** y la API pública de **NASA POWER**. A continuación, se describen las etapas principales del proyecto, los hallazgos obtenidos y las deducciones realizadas.
 
 ## 1. Exploración de Datos
 
 ### Fuentes de Datos
-- **NOAA**: Dataset público `bigquery-public-data.noaa_gsod.gsod2024` para datos históricos de temperaturas globales.
-- **NASA POWER API**: Datos meteorológicos horarios para una ubicación específica (Latitud: 40°N, Longitud: 100°W).
+- **NOAA Global Surface Summary of the Day**: Dataset público [`NOAA Global Surface Summary of the Day`](https://console.cloud.google.com/bigquery?ws=!1m4!1m3!3m2!1sbigquery-public-data!2snoaa_gsod) para datos históricos de temperaturas globales.
+- **NASA POWER API**: Datos meteorológicos horarios obtenidos de la API pública de NASA POWER. Más información disponible en [`NASA POWER`](https://power.larc.nasa.gov/).
 
 ### Datos Extraídos
-- **NOAA**: Datos de temperaturas globales para el año 2024.
+- **NOAA Global Surface Summary of the Day**: Datos de temperaturas globales para el año 2024.
 - **NASA POWER**: Datos meteorológicos horarios, incluyendo temperatura, humedad, velocidad del viento, entre otros.
 
 ---
@@ -17,7 +17,7 @@ Este proyecto analiza datos climáticos históricos y en tiempo real utilizando 
 ## 2. Limpieza y Transformación de Datos
 
 ### Procesos Realizados
-- **NOAA**:
+- **NOAA Global Surface Summary of the Day**:
   - Eliminación de columnas irrelevantes.
   - Renombrado de columnas para mayor claridad.
   - Conversión de fechas al formato `datetime`.
@@ -26,7 +26,7 @@ Este proyecto analiza datos climáticos históricos y en tiempo real utilizando 
 
 - **NASA POWER**:
   - Conversión del índice a formato `datetime`.
-  - Normalización de datos para alinearlos con el formato de BigQuery.
+  - Normalización de datos para alinearlos con el formato del dataset de NOAA.
   - Unión de ambos datasets utilizando la columna de fechas.
 
 ### Filtros Aplicados
@@ -73,25 +73,21 @@ Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seabor
 
 ## 4. Análisis e Interpretación de Resultados
 
-### Hallazgos Clave
-- **Tendencias de Temperatura**: Aumento gradual de las temperaturas durante el año 2024.
-- **Correlaciones**:
-  - Fuerte correlación positiva entre temperatura y humedad específica (r = 0.78).
-  - Correlación negativa entre temperatura y humedad relativa (r = -0.51).
-- **Comparación de Fuentes**: Los datos de NOAA y NASA POWER mostraron tendencias similares, validando la consistencia entre ambas fuentes.
-
-
 ### Estimación de Ubicación Geográfica
-El análisis de la evolución de las temperaturas a lo largo de un año permitió estimar la ubicación geográfica correspondiente a los datos de NOAA. Al observar las tendencias y patrones de temperatura, se dedujo que la ubicación más probable era **Latitud: 40°N, Longitud: 100°W**. Esta estimación se validó al comparar los datos de NOAA con los datos obtenidos de la API de NASA POWER para la misma ubicación.
-
-### Superposición de Gráficos
-Los gráficos generados a partir de los datos de NOAA y NASA POWER muestran una notable superposición en las tendencias de temperatura. Esto refuerza la consistencia entre ambas fuentes de datos y valida la estimación de la ubicación geográfica. La similitud en las tendencias sugiere que los datos de NOAA corresponden efectivamente a la ubicación seleccionada en la API de NASA POWER.
+El análisis de la evolución de las temperaturas a lo largo de un año permitió estimar la ubicación geográfica correspondiente a los datos del dataset de NOAA. Al observar las tendencias y patrones de temperatura, se dedujo que la ubicación más probable era **Latitud: 40°N, Longitud: 100°W**. Esta estimación se validó al comparar los datos de NOAA con los datos obtenidos de la API de NASA POWER para la misma ubicación.
 
 ### Correlaciones y Deducciones
 El análisis de las correlaciones entre las variables meteorológicas reveló los siguientes hallazgos clave:
 - **Temperatura y Humedad Específica (r = 0.78)**: Existe una fuerte correlación positiva entre la temperatura y la humedad específica. Esto sugiere que a medida que la temperatura aumenta, la cantidad de vapor de agua en el aire también tiende a aumentar. Este comportamiento es consistente con las leyes físicas que relacionan la capacidad del aire para retener humedad con la temperatura.
 - **Temperatura y Humedad Relativa (r = -0.51)**: Se observó una correlación negativa moderada entre la temperatura y la humedad relativa. Esto indica que, aunque la cantidad absoluta de vapor de agua puede aumentar con la temperatura, la humedad relativa disminuye porque el aire más cálido puede contener más vapor de agua antes de saturarse.
 - **Velocidad del Viento y Precipitación**: Aunque no se identificaron correlaciones fuertes entre estas variables, los datos sugieren que la velocidad del viento puede influir en la distribución de la precipitación en ciertas condiciones climáticas.
+
+### Deducciones Adicionales
+1. **Efectos Regionales**: La ubicación geográfica estimada (Latitud: 40°N, Longitud: 100°W) corresponde a una región con un clima continental. Esto explica las variaciones significativas en las temperaturas diarias y estacionales observadas en los datos.
+2. **Impacto del Cambio Climático**: Las correlaciones observadas entre la temperatura y las variables relacionadas con la humedad son consistentes con los efectos esperados del cambio climático, como un aumento en la capacidad del aire para retener humedad y cambios en los patrones de precipitación.
+3. **Validación de Fuentes**: La similitud en las tendencias de temperatura entre los datos de NOAA y NASA POWER valida la consistencia de ambas fuentes y refuerza la confiabilidad de los resultados.
+4. **Modelado Climático**: Las correlaciones identificadas pueden ser útiles para desarrollar modelos predictivos que analicen el impacto del cambio climático en variables meteorológicas clave, como la humedad y la precipitación.
+5. **Análisis Temporal**: La tendencia de aumento gradual en las temperaturas diarias sugiere un patrón consistente con el calentamiento global, lo que podría tener implicaciones significativas para la agricultura, los recursos hídricos y la biodiversidad en la región estudiada.
 
 
 ### Conclusiones
