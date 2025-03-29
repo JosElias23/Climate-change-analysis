@@ -70,10 +70,7 @@ Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seabor
 ![Comparación de temperaturas](Comparacion_Temperaturas.png)
 
 ---
-___
-![Tendencia diaria de temperatura](Temperatura_Diaria_2024.png)
 
-__
 ## 4. Análisis e Interpretación de Resultados
 
 ### Hallazgos Clave
