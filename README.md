@@ -58,7 +58,20 @@ Se generaron las siguientes visualizaciones utilizando **Matplotlib** y **Seabor
 ![Comparación de temperaturas](attachment://Comparacion_Temperaturas.png)
 
 ---
+____
 
+![Tendencia diaria de temperatura](Temperatura_Diaria_2024.png)
+![Matriz de correlación BigQuery](Matriz_Correlacion_BigQuery.png)
+![Temperatura vs Tiempo](Temperatura_vs_Tiempo.png)
+![Matriz de correlación NASA POWER](Matriz_Correlacion_NASA_POWER.png)
+![Correlaciones clave](Correlaciones_Clave.png)
+![Comparación de temperaturas](Comparacion_Temperaturas.png)
+
+
+
+
+
+____
 ## 4. Análisis e Interpretación de Resultados
 
 ### Hallazgos Clave
