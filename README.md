@@ -1,4 +1,4 @@
-## Contenido
+## Índice
 
 - [1. Exploración de Datos](#1-exploración-de-datos)
   - [Fuentes de Datos](#fuentes-de-datos)
