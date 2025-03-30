@@ -1,4 +1,36 @@
-# Análisis de Datos Climáticos: NOAA Global Surface Summary of the Day y NASA POWER API
+## Contenido
+
+- [1. Exploración de Datos](#1-exploración-de-datos)
+  - [Fuentes de Datos](#fuentes-de-datos)
+  - [Datos Extraídos](#datos-extraídos)
+- [2. Limpieza y Transformación de Datos](#2-limpieza-y-transformación-de-datos)
+  - [Procesos Realizados](#procesos-realizados)
+  - [Filtros Aplicados](#filtros-aplicados)
+- [3. Análisis de Datos](#3-análisis-de-datos)
+  - [Tendencia diaria de temperatura en 2024 (NOAA)](#31-tendencia-diaria-de-temperatura-en-2024-noaa)
+  - [Matriz de correlación de variables meteorológicas (NOAA)](#32-matriz-de-correlación-de-variables-meteorológicas-noaa)
+  - [Temperatura vs Tiempo (NASA POWER)](#33-temperatura-vs-tiempo-nasa-power)
+  - [Matriz de correlación de variables meteorológicas (NASA POWER)](#34-matriz-de-correlación-de-variables-meteorológicas-nasa-power)
+  - [Correlaciones clave en datos meteorológicos](#35-correlaciones-clave-en-datos-meteorológicos)
+  - [Comparación de temperaturas: NASA vs NOAA](#36-comparación-de-temperaturas-nasa-vs-noaa)
+- [4. Análisis de Eventos Climáticos y Comparación de Temperaturas](#4-análisis-de-eventos-climáticos-y-comparación-de-temperaturas)
+  - [Extracción de Datos](#extracción-de-datos)
+  - [Limpieza de Datos](#limpieza-de-datos)
+  - [Análisis de Eventos Climáticos](#análisis-de-eventos-climáticos)
+  - [Comparación de Temperaturas](#comparación-de-temperaturas)
+- [Resultados Esperados](#resultados-esperados)
+  - [Resumen de Eventos Climáticos](#resumen-de-eventos-climáticos)
+  - [Gráficos](#gráficos)
+- [Análisis Detallado](#análisis-detallado)
+  - [Eventos Climáticos](#eventos-climáticos)
+  - [Tendencias de Temperatura](#tendencias-de-temperatura)
+- [Conclusiones](#conclusiones)
+- [Requisitos y Ejecución](#requisitos-y-ejecución)
+  - [Requisitos](#requisitos)
+  - [Ejecución](#ejecución)
+- [Créditos](#créditos)
+
+  # Análisis de Datos Climáticos: NOAA Global Surface Summary of the Day y NASA POWER API
 
 Este proyecto analiza datos climáticos históricos y en tiempo real utilizando el dataset de **NOAA Global Surface Summary of the Day** y la API pública de **NASA POWER**. A continuación, se describen las etapas principales del proyecto, los hallazgos obtenidos y las deducciones realizadas.
 
